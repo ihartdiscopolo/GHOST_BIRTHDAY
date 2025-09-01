@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>𐔌՞. .՞𐦯</title>
+    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/1200x/3e/df/bf/3edfbf53d26f3ef47ced1f34b8eb0bca.jpg">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="dreamy-timer-box">
+  <div class="dreamy-layout">
+    <img src="images/SUA.jpg" class="side-img left-img"> 
+    <div class="dreamy-content">
+      <h1 id="dreamy-timer-title">WE MATCHED PFPS FOR THE FIRST TIME...</h1>
+      <div id="dreamy-time-counter">Loading...</div>
+      <h2>ago.. holy shit</h2>
+      <button>
+        <a href="IDK.html" class="button"> "worst 3 years of my life (╥﹏╥)"</a>
+      </button>
+    </div>
+    <img src="images/MIZI.jpg" class="side-img right-img"> 
+  </div>
+</div>
+
+<script>
+  const startDate = new Date("2022-01-22T00:00:00");
+
+  function updateTimeSinceDisplay() {
+    const now = new Date();
+    let diff = now - startDate;
+
+    const years = now.getFullYear() - startDate.getFullYear();
+    let anniversary = new Date(startDate);
+    anniversary.setFullYear(startDate.getFullYear() + years);
+    if (anniversary > now) {
+      anniversary.setFullYear(anniversary.getFullYear() - 1);
+    }
+
+    let timeDiff = now - anniversary;
+    let days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    timeDiff -= days * (1000 * 60 * 60 * 24);
+
+    let hours = Math.floor(timeDiff / (1000 * 60 * 60));
+    timeDiff -= hours * (1000 * 60 * 60);
+
+    let minutes = Math.floor(timeDiff / (1000 * 60));
+    timeDiff -= minutes * (1000 * 60);
+
+    let seconds = Math.floor(timeDiff / 1000);
+
+    document.getElementById("dreamy-time-counter").innerHTML =
+      `${years} years, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+  }
+
+  updateTimeSinceDisplay();
+  setInterval(updateTimeSinceDisplay, 1000);
+</script>
+</body>
+<footer>
+    <button>
+        <a href="ENVELOPE.html" class="button"> ← Go back?</a>
+    </button>
+</footer>
