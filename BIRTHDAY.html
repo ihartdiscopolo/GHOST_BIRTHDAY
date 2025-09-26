@@ -1,112 +1,149 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>˗ˏˋ ꒰ 🎂 ꒱ ˎˊ˗</title>
-    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/1200x/3e/df/bf/3edfbf53d26f3ef47ced1f34b8eb0bca.jpg">
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <head>
+        <title>˗ˏˋ ꒰ 🎂 ꒱ ˎˊ˗</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://i.pinimg.com/1200x/3e/df/bf/3edfbf53d26f3ef47ced1f34b8eb0bca.jpg"
+        />
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
 
-<body>
-    <div class="container">
-        <div class="MIZISUA">
-            <img src="https://i.pinimg.com/736x/58/94/91/589491f48994f3e9cb27356b11fe3a66.jpg"> 
-            <h1>HAPPY BIRTHDAY GHOST!!</h1>
-            <h2>The music player will stop if you click the button:[</h2>
+    <body>
+        <div class="container">
+            <div class="MIZISUA">
+                <img
+                    src="https://i.pinimg.com/736x/58/94/91/589491f48994f3e9cb27356b11fe3a66.jpg"
+                />
+                <h1>HAPPY BIRTHDAY GHOST!!</h1>
+                <h2>The music player will stop if you click the button:[</h2>
 
-            <div class="button-container">
-                <button class="pulse">
-                    <a href="ENVELOPE.html" class="button">꒰ TY baebae ^3^ ꒱</a>
-                </button>
+                <div class="button-container">
+                    <button class="pulse">
+                        <a href="ENVELOPE.html" class="button"
+                            >꒰ TY baebae ^3^ ꒱</a
+                        >
+                    </button>
 
-                <button class="red">
-                    <a href="https://www.youtube.com/watch?v=qQlVtAiFARI&list=RDqQlVtAiFARI&start_radio=1" class="button">kys (ꐦ¬_¬)</a>
-                </button>
-            </div>
-            <div class="music-controls">
-            <button id="music-toggle">START MUSIC ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</button>
-             <select id="song-selector" style="display: none;">
-                <option value="music/KARMA Alien Stage.mp3">KARMA - Alien Stage</option>
-                <option value="music/CURE (SUA & MIZI.ver)  Alien Stage.mp3">CURE - SUA & MIZI</option>
-                <option value="music/Ruler of my heart (SUA.ver)  Alien Stage.mp3">Ruler of my heart - SUA</option>
-            </select>
-            </div>
-
-            <div id="music-progress">
-                <div class="seek-bar-container">
-                    <input type="range" id="seek-bar" value="0" min="0" step="1">
+                    <button class="red">
+                        <a
+                            href="https://www.youtube.com/watch?v=qQlVtAiFARI&list=RDqQlVtAiFARI&start_radio=1"
+                            class="button"
+                            >kys (ꐦ¬_¬)</a
+                        >
+                    </button>
                 </div>
-                <div id="time-display">
-                    <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                <div class="music-controls">
+                    <button id="music-toggle">
+                        START MUSIC ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
+                    </button>
+                    <select id="song-selector" style="display: none">
+                        <option value="music/KARMA Alien Stage.mp3">
+                            KARMA - Alien Stage
+                        </option>
+                        <option
+                            value="music/CURE (SUA & MIZI.ver)  Alien Stage.mp3"
+                        >
+                            CURE - SUA & MIZI
+                        </option>
+                        <option
+                            value="music/Ruler of my heart (SUA.ver)  Alien Stage.mp3"
+                        >
+                            Ruler of my heart - SUA
+                        </option>
+                    </select>
+                </div>
+
+                <div id="music-progress">
+                    <div class="seek-bar-container">
+                        <input
+                            type="range"
+                            id="seek-bar"
+                            value="0"
+                            min="0"
+                            step="1"
+                        />
+                    </div>
+                    <div id="time-display">
+                        <span id="current-time">0:00</span> /
+                        <span id="duration">0:00</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <audio id="bg-music" loop>
-        <source src="music/KARMA Alien Stage.mp3" type="audio/mpeg">
-        <source src="music/CURE (SUA & MIZI.ver)  Alien Stage.mp3" type="audio/mpeg">
-        <source src="music/Ruler of my heart (SUA.ver)  Alien Stage.mp3" type="audio/mpeg">
-    </audio>
+        <audio id="bg-music" loop>
+            <source src="music/KARMA Alien Stage.mp3" type="audio/mpeg" />
+            <source
+                src="music/CURE (SUA & MIZI.ver)  Alien Stage.mp3"
+                type="audio/mpeg"
+            />
+            <source
+                src="music/Ruler of my heart (SUA.ver)  Alien Stage.mp3"
+                type="audio/mpeg"
+            />
+        </audio>
 
-    <script>
-    const music = document.getElementById('bg-music');
-    const toggleButton = document.getElementById('music-toggle');
-    const songSelector = document.getElementById('song-selector');
-    const source = music.querySelector('source');
-    const seekBar = document.getElementById('seek-bar');
-    const currentTimeDisplay = document.getElementById('current-time');
-    const durationDisplay = document.getElementById('duration');
-    const musicProgress = document.getElementById('music-progress'); 
+        <script>
+            const music = document.getElementById("bg-music");
+            const toggleButton = document.getElementById("music-toggle");
+            const songSelector = document.getElementById("song-selector");
+            const source = music.querySelector("source");
+            const seekBar = document.getElementById("seek-bar");
+            const currentTimeDisplay = document.getElementById("current-time");
+            const durationDisplay = document.getElementById("duration");
+            const musicProgress = document.getElementById("music-progress");
 
-    songSelector.style.display = "none";
+            songSelector.style.display = "none";
 
-    toggleButton.addEventListener('click', () => {
-        if (songSelector.style.display === "none") {
-            songSelector.style.display = "block";
-            music.play();
-            toggleButton.textContent = "❚❚";
-            musicProgress.style.display = "block"; 
-        } else {
-            if (music.paused) {
+            toggleButton.addEventListener("click", () => {
+                if (songSelector.style.display === "none") {
+                    songSelector.style.display = "block";
+                    music.play();
+                    toggleButton.textContent = "❚❚";
+                    musicProgress.style.display = "block";
+                } else {
+                    if (music.paused) {
+                        music.play();
+                        toggleButton.textContent = "❚❚";
+                        musicProgress.style.display = "block";
+                    } else {
+                        music.pause();
+                        toggleButton.textContent = "▶";
+                        musicProgress.style.display = "none";
+                    }
+                }
+            });
+
+            songSelector.addEventListener("change", () => {
+                const selectedSong = songSelector.value;
+                source.src = selectedSong;
+                music.load();
                 music.play();
                 toggleButton.textContent = "❚❚";
-                musicProgress.style.display = "block"; 
-            } else {
-                music.pause();
-                toggleButton.textContent = "▶";
-                musicProgress.style.display = "none"; 
+                musicProgress.style.display = "block";
+            });
+
+            music.addEventListener("loadedmetadata", () => {
+                seekBar.max = Math.floor(music.duration);
+                durationDisplay.textContent = formatTime(music.duration);
+            });
+
+            music.addEventListener("timeupdate", () => {
+                seekBar.value = Math.floor(music.currentTime);
+                currentTimeDisplay.textContent = formatTime(music.currentTime);
+            });
+
+            seekBar.addEventListener("input", () => {
+                music.currentTime = seekBar.value;
+            });
+
+            function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
             }
-        }
-    });
-
-    songSelector.addEventListener('change', () => {
-        const selectedSong = songSelector.value;
-        source.src = selectedSong;
-        music.load(); 
-        music.play(); 
-        toggleButton.textContent = "❚❚";
-        musicProgress.style.display = "block";
-    });
-
-    music.addEventListener('loadedmetadata', () => {
-        seekBar.max = Math.floor(music.duration);
-        durationDisplay.textContent = formatTime(music.duration);
-    });
-
-    music.addEventListener('timeupdate', () => {
-        seekBar.value = Math.floor(music.currentTime);
-        currentTimeDisplay.textContent = formatTime(music.currentTime);
-    });
-
-    seekBar.addEventListener('input', () => {
-        music.currentTime = seekBar.value;
-    });
-
-    function formatTime(seconds) {
-        const mins = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
-        return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-    }
-    </script>
-</body>
+        </script>
+    </body>
 </html>
